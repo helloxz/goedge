@@ -29,6 +29,18 @@ Docker参数对应关系为：
 
 
 
+## 注意
+
+防火墙放行对应端口，一般为：
+
+```bash
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --reload
+```
+
+
+
 ## 其它说明
 
 推荐将Docker容器网络类型设置为`--network=host`可降低网络开销，提高性能。而且`edge-node`的监听是可以自行设置的，不是固定某个端口，使用`--network=host`灵活性也更好。
