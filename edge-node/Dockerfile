@@ -9,4 +9,4 @@ RUN sh install.sh
 #暴露端口
 EXPOSE 80 443
 #运行启动脚本和nginx
-CMD ["/root/run.sh"]
+CMD ["sh /root/run.sh"]
