@@ -9,14 +9,14 @@ GoEdge是一款管理分布式边缘节点的开源工具软件，目的是让�
 
 ```bash
 docker run -d --name="edge-node" \
-	-e ENDPOINTS='http://IP:8001' \
-	-e CLUSTERID='xxx' \
-	-e SECRET='xxx' \
-	-v /data/edge-node/cache:/opt/cache \
-	-v /data/edge-node/configs:/root/edge-node/configs \
-	--network=host \
-	--restart=always \
-	helloz/edge-node:0.3.2
+  -e ENDPOINTS='http://IP:8001' \
+  -e CLUSTERID='xxx' \
+  -e SECRET='xxx' \
+  -v /data/edge-node/cache:/opt/cache \
+  -v /data/edge-node/configs:/root/edge-node/configs \
+  --network=host \
+  --restart=always \
+  helloz/edge-node:0.3.2
 ```
 
 首先在goedge管理界面 - 边缘节点 - 找到你所在集群 - 集群节点 - 安装升级 - 自动注册，记录：`endpoints/clusterId/secret`，如下图：
@@ -24,6 +24,9 @@ docker run -d --name="edge-node" \
 ![](https://i.bmp.ovh/imgs/2021/10/57ec94f01752d7f9.png)
 
 Docker参数对应关系为：
+
+* `/data/edge-node/cache`：edge-node缓存路径，用于docker持久化存储
+* `/data/edge-node/configs`：edge-node配置文件夹路径，用于docker持久化存储
 
 * ENDPOINTS：对应`endpoints的URL地址
 * CLUSTERID：对应clusterId
