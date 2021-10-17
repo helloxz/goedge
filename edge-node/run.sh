@@ -15,6 +15,7 @@ if [ -e ${EDGE_PATH}/configs/cluster.yaml ]
 then
     run
 else
+    cp -f /tmp/edge-node/api.template.yaml ${EDGE_PATH}/configs/
     touch ${EDGE_PATH}/configs/cluster.yaml
 cat >> ${EDGE_PATH}/configs/cluster.yaml << EOF
 rpc:

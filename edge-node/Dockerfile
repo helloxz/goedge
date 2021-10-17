@@ -8,5 +8,7 @@ COPY *.sh /root/
 RUN sh install.sh
 #暴露端口
 EXPOSE 80 443
+#暴露外部路径
+VOLUME ["/opt/cache", "/root/edge-node/configs"]
 #运行启动脚本和nginx
 CMD ["sh","/root/run.sh"]

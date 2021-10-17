@@ -22,10 +22,14 @@ VERSION='v0.3.2'
 
 #安装edge_node
 function install_edgenode(){
+    mkdir -p /opt/cache
+    chmod 777 /opt/cache
     cd /root
     wget https://dl.balefm.com/edge-node/${VERSION}/edge-node-linux-amd64-plus-${VERSION}.zip
     unzip edge-node-linux-amd64-plus-${VERSION}.zip
     rm -rf edge-node-linux-amd64-plus-${VERSION}.zip
+    mkdir -p /tmp/edge-node
+    cp -f /root/edge-node/configs/api.template.yaml  /tmp/edge-node/
 }
 #清理工作
 function make_clean(){

@@ -12,6 +12,8 @@ docker run -d --name="edge-node" \
 	-e ENDPOINTS='http://IP:8001' \
 	-e CLUSTERID='xxx' \
 	-e SECRET='xxx' \
+	-v /data/edge-node/cache:/opt/cache \
+	-v /data/edge-node/configs:/root/edge-node/configs \
 	--network=host \
 	--restart=always \
 	helloz/edge-node:0.3.2
