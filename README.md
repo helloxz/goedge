@@ -1,7 +1,9 @@
 # goedge
-是用Docker方式部署goedge，目前仅支持edge-node
+GoEdge是一款管理分布式边缘节点的开源工具软件，目的是让用户轻松地、低成本地创建CDN/WAF等应用。
 
+目前此项目仅支持运行`edge-node` ，请确保您已经安装`edge-admin`和`edge-api`，否则无法正常使用。
 
+> 官方文档：[https://goedge.cn/docs/About.md](https://goedge.cn/docs/About.md)
 
 ## Docker运行edge-node
 
@@ -23,7 +25,7 @@ Docker参数对应关系为：
 
 * ENDPOINTS：对应`endpoints的URL地址
 * CLUSTERID：对应clusterId
-* SECRET：对应SECRET
+* SECRET：对应secret
 
 运行成功后继续回到goedge管理界面 - 边缘节点即可看到刚刚自动注册的节点，然后进行管理设置即可。
 
