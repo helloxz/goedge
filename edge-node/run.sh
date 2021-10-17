@@ -6,9 +6,9 @@ EDGE_PATH='/root/edge-node'
 
 #运行edge_node
 function run(){
-    ${EDGE_PATH}/bin/edge-node start
-    sleep 10
-    tail -f ${EDGE_PATH}/logs/run.log
+    ${EDGE_PATH}/bin/edge-node
+    # sleep 10
+    # tail -f ${EDGE_PATH}/logs/run.log
 }
 #如果文件存在
 if [ -e ${EDGE_PATH}/configs/cluster.yaml ]
