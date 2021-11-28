@@ -1,0 +1,15 @@
+version: "3"
+services:
+  xcdn:
+    image: helloz/edge-node:0.3.6
+    container_name: edge-node
+    volumes:
+      - /data/edge-node/cache:/opt/cache
+      - /data/edge-node/configs:/root/edge-node/configs
+    environment:
+      ENDPOINTS: "http://xxx.com:8001"
+      CLUSTERID: "xxx"
+      SECRET: "xxx"
+    network_mode: "host"
+    restart:
+      always
