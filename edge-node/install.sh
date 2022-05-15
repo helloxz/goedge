@@ -18,7 +18,7 @@ apk del tzdata
 apk add --no-cache wget curl unzip
 
 #edge_node版本
-VERSION='v0.3.6.7'
+VERSION='v0.4.7.1'
 
 #安装edge_node
 function install_edgenode(){
